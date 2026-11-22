@@ -1,0 +1,58 @@
+{
+  "name": "@fundapi/sdk",
+  "version": "0.1.0",
+  "description": "基金数据 API 官方 Node.js / TypeScript SDK —— 净值 / 档案 / 季报持仓 / 基金经理 / 排行 / 公告 / 分红 / 交易规则 / 评级 / 组合穿透（19 个端点，免费端点无需 Key）",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "README.en.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "fund",
+    "fund-api",
+    "mutual-fund",
+    "finance",
+    "mcp",
+    "financial-data-api",
+    "typescript",
+    "nodejs"
+  ],
+  "homepage": "https://fundapi.cn",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fundapi-cn/fundapi-node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fundapi-cn/fundapi-node/issues"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.9.0",
+    "vitest": "^3.0.5"
+  }
+}
